@@ -1,0 +1,23 @@
+[
+    {
+        "id" : 1,
+        "productName" : "Banana",
+        "price" : 3,
+        "imgsrc" : "http://localhost:3000/images/banana.jpg"
+    },
+    {
+        "id" : 2,
+        "productName" : "Apple",
+        "price" : 5,
+        "imgsrc" : "http://localhost:3000/images/apple.jpg"
+
+    },
+    {
+        "id" : 3,
+        "productName" : "Fish",
+        "price" : 25,
+        "imgsrc" : "http://localhost:3000/images/fish.jpg"
+
+    }
+
+]
