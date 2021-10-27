@@ -1,12 +1,12 @@
 async function createProducts(){
 
-    console.log("hello? ")
-
     let url = "http://localhost:3000/items";
 
     const jsonData = await fetch(url).then((res) => res.json());
 
     const body = document.querySelector('body');
+
+    let id = 1;
 
     for (const product of jsonData) {
         
@@ -25,16 +25,27 @@ async function createProducts(){
     price.className = "price";
     price.innerHTML = product.price +",- DKK";
 
-    const btn = document.createElement('button')
-    btn.className = "buyBtn"
-    btn.innerHTML = "Buy"
+    const divAdd = document.createElement('div');
+
+    const cbox = document.createElement('input');
+    cbox.type = "checkbox"
+    cbox.className = "cbox"
+    cbox.param = id;
+
+    const lbl = document.createElement('label');
+    lbl.innerHTML = "Add to cart"
+
+    divAdd.appendChild(cbox);
+    divAdd.appendChild(lbl);
 
     div.appendChild(img);
     div.appendChild(title);
     div.appendChild(price);
-    div.appendChild(btn);
+    div.appendChild(divAdd);
 
     body.appendChild(div)
+
+    id++;
     }
 
 }
